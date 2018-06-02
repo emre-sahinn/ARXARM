@@ -1,5 +1,6 @@
 # ARXARM
 Arxarm is a simple robot arm which was made with arduino.
+It can be controlled via bluetooth.
 
 # 3D Model
 ![alt text](https://2.bp.blogspot.com/-Yto0Ao1QgSA/WxGcBVS7StI/AAAAAAAAAEQ/XP6MGCMy3GEM9oKBzH7E4E8ABoFZKvcvQCLcBGAs/s1600/0003.png)
