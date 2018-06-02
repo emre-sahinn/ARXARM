@@ -10,20 +10,17 @@ bool b2 = false;
 bool c1 = false;
 bool c2 = false;
 
-bool kiskac1 = false;
-bool kiskac2 = false;
+bool claw1 = false;
+bool claw2 = false;
 
 
 Servo servo1;
 Servo servo2;
 Servo servo3;
 Servo servo4;
-
 Servo servo5;
-Servo servo6;
 
-bool solservo;
-bool sagservo;
+
 
 int x1 = 90;
 int x2 = 90;
@@ -32,9 +29,9 @@ int x4 = 90;
 
 
 void setup() {
-  servo1.write(x1);
-  servo2.write(x2);//|\\
-  servo3.write(x2);\\|//
+  servo1.write(x1); //This codes for stabilisation
+  servo2.write(x2); //|\\ Opposite motors
+  servo3.write(x2); \\|// Opposite motors
   servo4.write(x3);
   servo5.write(x1);
 
@@ -122,29 +119,29 @@ void loop() {
       b2 = false;
       c1 = false;
       c2 = false;
-      kiskac1 = false;
-      kiskac2 = false;
+      claw1 = false;
+      claw2 = false;
     }
 
     if (data == 'a') {
-      kiskac1 = true;
-      kiskac2 = false;
+      claw1 = true;
+      claw2 = false;
     }
 
     if (data == 'b') {
-      kiskac1 = false;
-      kiskac2 = true;
+      claw1 = false;
+      claw2 = true;
     }
   }
 
 
-  if (kiskac1 == true) {
+  if (claw1 == true) {
     if (x4 < 180) {
       x4 += 1;
       servo5.write(x4);
       delay(15);
     }
-  } else if (kiskac2 == true) {
+  } else if (claw2 == true) {
     if (x4 > 0) {
       x4 -= 1;
       servo5.write(x4);
@@ -189,7 +186,6 @@ void loop() {
     if (x3 > 0) {
       x3 -= 1;
       servo4.write(x3);
-
       delay(30);
     }
   }
